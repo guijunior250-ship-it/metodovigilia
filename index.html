@@ -26,64 +26,141 @@
       font-family: Georgia, "Times New Roman", serif;
       background: #0e0e0e;
       color: #f2f2f2;
-      line-height: 1.6;
+      line-height: 1.7;
     }
+
     .container {
       max-width: 720px;
       margin: auto;
-      padding: 20px;
+      padding: 24px;
     }
-    h1, h2 {
+
+    h1 {
       text-align: center;
       letter-spacing: 1px;
+      font-size: 30px;
+      margin-bottom: 10px;
     }
-    .video {
-      margin: 30px 0;
+
+    h2 {
+      text-align: center;
+      font-size: 20px;
+      font-weight: normal;
+      opacity: 0.9;
+      margin-bottom: 30px;
     }
-    iframe, video {
+
+    .video-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      margin: 40px 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(255,255,255,0.05);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      border-radius: 8px;
+      height: 100%;
+      border: none;
     }
+
     .cta {
       display: block;
       text-align: center;
-      background: #ffffff;
+      background: linear-gradient(135deg, #ffffff, #dddddd);
       color: #000000;
-      padding: 16px;
-      margin: 30px 0;
+      padding: 18px;
+      margin: 40px 0;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 6px;
-      font-size: 18px;
+      border-radius: 8px;
+      font-size: 19px;
+      letter-spacing: 0.5px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 8px 30px rgba(255,255,255,0.15);
     }
+
     .cta:hover {
-      opacity: 0.9;
+      transform: translateY(-1px);
+      box-shadow: 0 12px 40px rgba(255,255,255,0.25);
     }
+
     .block {
       margin: 40px 0;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      margin: 40px 0;
+    }
+
+    .proof {
+      background: rgba(255,255,255,0.03);
+      padding: 24px;
+      border-radius: 10px;
+      font-style: italic;
+      font-size: 17px;
+    }
+
+    .risk {
+      font-size: 15px;
+      opacity: 0.8;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      padding: 12px;
+      text-align: center;
+      z-index: 999;
+      display: none;
+    }
+
+    .sticky-cta a {
+      background: #000000;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
     }
   </style>
 </head>
 
 <body>
+
   <div class="container">
 
-    <h1>Um método simples para parar de viver no automático — e voltar a ter clareza, disciplina e direção em 15 minutos por dia</h1>
-    <h2>Sem motivação forçada. Sem rotina impossível. Apenas uma regra prática para organizar mente, tempo e vida interior — mesmo nos dias comuns e cansados.</h2>
+    <h1>Uma estrutura diária para organizar sua mente, definir prioridades e terminar o dia com a sensação real de que você viveu o que era importante — não apenas o que era urgente</h1>
 
+    <h2>Sem motivação forçada. Sem rotinas irreais. Apenas uma regra prática para trazer ordem, direção e sobriedade à sua vida interior — mesmo nos dias comuns, cansados e imperfeitos.</h2>
 
     <p><strong>Assista este vídeo até o final se você sente que está ocupado todos os dias — mas, no fundo, não sabe exatamente para onde sua vida está indo.</strong></p>
 
-    <div class="video">
-      <!-- TROQUE O LINK DO VÍDEO AQUI -->
-      <iframe src="https://player.vimeo.com/video/1157991345"
-        frameborder="0"
-        allowfullscreen></iframe>
+    <div class="video-wrapper">
+      <iframe 
+        src="https://player.vimeo.com/video/1157991345?title=0&byline=0&portrait=0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
 
     <div class="block">
       <p>
-        Você acorda, cumpre tarefas, responde mensagens, resolve pendências — e o dia termina com a sensação estranha de que você esteve ocupado, mas não esteve presente.  
+        Você acorda, cumpre tarefas, responde mensagens, resolve pendências — e o dia termina com a sensação estranha de que você esteve ocupado, mas não esteve presente.
         <br><br>
         Não é preguiça.  
         Não é falta de ambição.  
@@ -91,33 +168,75 @@
       </p>
     </div>
 
+    <div class="divider"></div>
 
     <div class="block">
       <p>
-        O Método Vigília não é mais um ebook motivacional.
-        É uma regra de vida prática, de ordem cristã, inspirada na tradição
-        milenar do exame de consciência, disciplina do tempo e sobriedade interior.
+        O Método Vigília não é mais um ebook motivacional.  
+        Não é terapia rápida.  
+        Não é produtividade agressiva com hacks e listas infinitas.
+        <br><br>
+        É uma regra de vida prática, de ordem cristã, inspirada na tradição milenar do exame de consciência, disciplina do tempo e sobriedade interior.
       </p>
     </div>
 
-    
+    <div class="block">
+      <p>
+        Este método nasceu da interseção entre tradição espiritual e os desafios modernos de sobrecarga mental, dispersão digital e vida acelerada.
+        <br><br>
+        Ele não foi criado para inspirar por alguns dias — mas para estruturar uma vida comum ao longo dos anos.
+      </p>
+    </div>
+
     <a class="cta checkout-btn" href="https://pay.hotmart.com/O103614312I">
       QUERO COMEÇAR MINHA VIGÍLIA HOJE
-
     </a>
 
-    
+    <div class="proof">
+      Leitores que começaram a aplicar o Método Vigília relatam mais clareza ao organizar o dia, menos ruído mental à noite e maior constância em práticas simples como planejamento, silêncio e exame pessoal — mesmo em rotinas de trabalho intensas.
+    </div>
+
+    <div class="risk">
+      Você está protegido pela garantia da Hotmart. Se o Método Vigília não fizer sentido para você, é possível solicitar reembolso dentro do prazo da plataforma — sem burocracia.
+    </div>
+
+    <a class="cta checkout-btn" href="https://pay.hotmart.com/O103614312I">
+      QUERO COMEÇAR MINHA VIGÍLIA HOJE
+    </a>
 
   </div>
 
-  <!-- EVENTO DE CHECKOUT -->
+  <!-- STICKY CTA MOBILE -->
+  <div class="sticky-cta" id="stickyCTA">
+    <a href="https://pay.hotmart.com/O103614312I" class="checkout-btn">
+      COMEÇAR AGORA
+    </a>
+  </div>
+
+  <!-- EVENTOS + SCROLL + STICKY -->
   <script>
-  document.addEventListener('click', function(e) {
-    if(e.target.closest('.checkout-btn')) {
-      fbq('track', 'InitiateCheckout');
-    }
-  });
+    document.addEventListener('click', function(e) {
+      if(e.target.closest('.checkout-btn')) {
+        fbq('track', 'InitiateCheckout');
+      }
+    });
+
+    let stickyShown = false;
+    window.addEventListener('scroll', function() {
+      const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+
+      if(scrollPercent > 40 && !stickyShown) {
+        document.getElementById('stickyCTA').style.display = 'block';
+        stickyShown = true;
+        fbq('trackCustom', 'Scroll40');
+      }
+    });
+
+    setTimeout(function() {
+      fbq('trackCustom', 'TimeOnPage60s');
+    }, 60000);
   </script>
 
 </body>
 </html>
+
