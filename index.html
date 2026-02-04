@@ -31,6 +31,8 @@
 
   fbq('init', '1342453770207756');
   fbq('track', 'PageView');
+  // (Opcional/útil para funis): marca que houve consumo de conteúdo da página
+  fbq('track', 'ViewContent');
   </script>
 
   <noscript>
@@ -148,7 +150,7 @@
       background: linear-gradient(135deg, #ffffff, #dddddd);
       color: #000000;
       padding: 18px;
-      margin: 26px 0 10px;
+      margin: 22px 0 10px;
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
@@ -204,6 +206,35 @@
       line-height: 1.6;
     }
 
+    /* --- INSERIDO: bloco de segurança/expectativa antes do CTA --- */
+    .trust {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 16px 16px 14px;
+      border-radius: 12px;
+      margin: 16px 0 14px;
+    }
+    .trust h3 {
+      margin: 0 0 10px;
+      font-size: 17px;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+    .trust ul {
+      margin: 0;
+      padding-left: 18px;
+      opacity: 0.95;
+      font-size: 15px;
+    }
+    .trust li { margin: 8px 0; }
+    .trust .micro {
+      margin: 10px 0 0;
+      font-size: 13px;
+      opacity: 0.84;
+      text-align: center;
+      line-height: 1.55;
+    }
+
     .sticky-cta {
       position: fixed;
       bottom: 0;
@@ -232,6 +263,7 @@
       h1 { font-size: 26px; }
       h2 { font-size: 18px; }
       .block { font-size: 17px; }
+      .trust ul { font-size: 14.5px; }
     }
   </style>
 </head>
@@ -310,7 +342,21 @@
 
     <p class="pre-cta"><strong>Se você quer acesso ao método completo, o próximo passo é a compra.</strong></p>
 
-    <a class="cta checkout-btn" href="https://pay.hotmart.com/O103614312I" aria-label="Comprar Método Vigília">
+    <!-- INSERIDO: bloco de segurança/expectativa imediatamente antes do CTA -->
+    <div class="trust" id="compra-segura">
+      <h3>Compra segura e sem atrito</h3>
+      <ul>
+        <li><strong>Checkout pela Hotmart</strong> (ambiente seguro de pagamento).</li>
+        <li>Você vai preencher <strong>nome, e-mail e celular</strong> para a Hotmart liberar seu acesso.</li>
+        <li><strong>Acesso imediato</strong> após a confirmação (Pix ou cartão).</li>
+        <li><strong>Garantia de 7 dias</strong>: se não fizer sentido, você pode solicitar reembolso dentro do prazo da plataforma.</li>
+      </ul>
+      <p class="micro">
+        O celular é solicitado para validação e liberação do acesso (não para “marketing agressivo”).
+      </p>
+    </div>
+
+    <a class="cta checkout-btn" data-checkout="https://pay.hotmart.com/O103614312I" href="https://pay.hotmart.com/O103614312I" aria-label="Comprar Método Vigília">
       ADQUIRIR O MÉTODO VIGÍLIA (ACESSO IMEDIATO)
     </a>
 
@@ -318,7 +364,7 @@
 
     <p class="post-cta">
       Você será direcionado para o checkout seguro da Hotmart. <br>
-      No próximo passo, você só precisará informar seus dados para liberar o acesso (leva menos de 1 minuto).
+      No próximo passo, você informa <strong>nome, e-mail e celular</strong> para liberar o acesso (geralmente leva <strong>menos de 1 minuto</strong>).
     </p>
 
     <div class="proof">
@@ -333,7 +379,17 @@
 
     <p class="pre-cta"><strong>Se fizer sentido, conclua a compra e comece hoje.</strong></p>
 
-    <a class="cta checkout-btn" href="https://pay.hotmart.com/O103614312I" aria-label="Comprar Método Vigília">
+    <!-- INSERIDO: reforço final de segurança (sem aumentar “venda”, só reduzindo dúvida) -->
+    <div class="trust" aria-label="Reforço de segurança e acesso">
+      <ul>
+        <li><strong>Pagamento</strong>: Pix (liberação rápida) ou cartão.</li>
+        <li><strong>Entrega</strong>: acesso enviado por e-mail após a confirmação.</li>
+        <li><strong>Risco</strong>: você tem garantia dentro do prazo da Hotmart.</li>
+      </ul>
+      <p class="micro">Se você costuma “deixar para depois”, este é o passo mais simples: concluir agora e começar com calma.</p>
+    </div>
+
+    <a class="cta checkout-btn" data-checkout="https://pay.hotmart.com/O103614312I" href="https://pay.hotmart.com/O103614312I" aria-label="Comprar Método Vigília">
       FINALIZAR COMPRA E RECEBER ACESSO
     </a>
 
@@ -345,43 +401,40 @@
 
   <!-- STICKY CTA MOBILE -->
   <div class="sticky-cta" id="stickyCTA">
-    <a href="https://pay.hotmart.com/O103614312I" class="checkout-btn">
+    <a href="https://pay.hotmart.com/O103614312I" class="checkout-btn" data-checkout="https://pay.hotmart.com/O103614312I">
       COMPRAR AGORA (R$ 47,90)
     </a>
   </div>
 
   <!-- EVENTOS + SCROLL + TEMPO -->
   <script>
+    // --- INSERIDO: repassa UTMs/querystring para o checkout da Hotmart (melhor atribuição) ---
+    function buildCheckoutUrl(baseUrl) {
+      try {
+        const qs = window.location.search || '';
+        if (!qs) return baseUrl;
+
+        // Se o checkout já tem query, concatena com &
+        const joiner = baseUrl.includes('?') ? '&' : '?';
+        return baseUrl + joiner + qs.replace(/^\?/, '');
+      } catch (e) {
+        return baseUrl;
+      }
+    }
+
+    // Atualiza hrefs dos botões, preservando tracking
+    document.querySelectorAll('.checkout-btn').forEach(function(btn) {
+      const base = btn.getAttribute('data-checkout') || btn.getAttribute('href');
+      if (base) btn.setAttribute('href', buildCheckoutUrl(base));
+    });
+
     // rastreia clique no CTA (intenção forte)
     document.addEventListener('click', function(e) {
-      if (e.target.closest('.checkout-btn')) {
-        fbq('track', 'InitiateCheckout');
+      const btn = e.target.closest('.checkout-btn');
+      if (btn) {
+        // IMPORTANTE:
+        // Antes você disparava InitiateCheckout aqui.
+        // Isso pode inflar o número de "checkouts" (na prática vira "cliques para o checkout").
+        // Mantemos evento custom para medir intenção sem distorcer.
+        fbq('trackCustom', 'CheckoutClick');
         fbq('trackCustom', 'StrongIntent');
-
-        // evento extra opcional para depurar onde clicam
-        try {
-          const btnText = (e.target.closest('.checkout-btn').innerText || '').trim().slice(0, 60);
-          fbq('trackCustom', 'CTA_Click', { label: btnText });
-        } catch (err) {}
-      }
-    });
-
-    let stickyShown = false;
-
-    window.addEventListener('scroll', function() {
-      const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
-
-      if (scrollPercent > 40 && !stickyShown) {
-        document.getElementById('stickyCTA').style.display = 'block';
-        stickyShown = true;
-        fbq('trackCustom', 'Scroll40');
-      }
-    });
-
-    setTimeout(function() {
-      fbq('trackCustom', 'TimeOnPage60s');
-    }, 60000);
-  </script>
-
-</body>
-</html>
