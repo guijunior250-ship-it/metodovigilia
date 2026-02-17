@@ -1,545 +1,277 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Método Vigília — Pare de ver o dia passar no piloto automático</title>
-  <meta name="description" content="Um método de 15 minutos por dia para interromper o piloto automático, organizar a mente e voltar a viver com presença — no trabalho, em casa e sozinho." />
+<title>Método Vigília — Estruture seus dias</title>
+<meta name="description" content="Recupere controle do seu tempo com uma estrutura simples de 15 minutos por dia. Acesso imediato. Garantia de 7 dias.">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Método Vigília — Pare de ver o dia passar no piloto automático" />
-  <meta property="og:description" content="15 minutos por dia para interromper o piloto automático e recuperar presença real. Acesso imediato após a compra." />
-  <meta property="og:type" content="website" />
-  <!-- <meta property="og:image" content="SUA_IMAGEM_AQUI" /> -->
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1342453770207756');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1342453770207756&ev=PageView&noscript=1"/>
+</noscript>
 
-  <!-- Performance -->
-  <link rel="preconnect" href="https://connect.facebook.net" />
+<style>
 
-  <!-- ====== CONFIGURAÇÕES IMPORTANTES ====== -->
-  <script>
-    // 1) Troque pelo seu checkout novo (Stripe/Kiwify/MercadoPago/etc.)
-    // Ex.: "https://pay.seusite.com/checkout"
-    const CHECKOUT_URL = "https://pay.kiwify.com.br/2KPXAJ8";
+:root{
+--bg1:#0e0e0e;
+--bg2:#141414;
+--bg3:#101010;
+--text:#f2f2f2;
+--muted:rgba(255,255,255,0.8);
+--border:rgba(255,255,255,0.06);
+}
 
-    // 2) Defina se quer mostrar vídeo (recomendado: false por agora)
-    const SHOW_VIDEO = false;
+body{
+margin:0;
+background:var(--bg1);
+color:var(--text);
+font-family:Georgia, serif;
+line-height:1.7;
+}
 
-    // 3) Se SHOW_VIDEO = true, troque pela URL embed do seu vídeo
-    const VIDEO_EMBED_URL = "https://player.vimeo.com/video/1157991345?title=0&byline=0&portrait=0";
-  </script>
+.container{
+max-width:720px;
+margin:auto;
+padding:0 24px;
+}
 
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+.section{
+padding:60px 0;
+}
 
-    fbq('init', '1342453770207756');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1342453770207756&ev=PageView&noscript=1"/>
-  </noscript>
+.section.alt{
+background:var(--bg2);
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+}
 
-  <style>
-    :root{
-      --bg:#0b0b0b;
-      --panel: rgba(255,255,255,0.04);
-      --panel2: rgba(255,255,255,0.06);
-      --line: rgba(255,255,255,0.10);
-      --text:#f2f2f2;
-      --muted: rgba(255,255,255,0.78);
-      --muted2: rgba(255,255,255,0.62);
-      --accent:#ffffff;
-      --accentText:#000000;
-      --shadow: 0 10px 40px rgba(0,0,0,0.55);
-      --radius: 14px;
-    }
+.section.alt2{
+background:var(--bg3);
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+}
 
-    * { box-sizing: border-box; }
-    body{
-      margin:0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: radial-gradient(1200px 800px at 50% -150px, rgba(255,255,255,0.08), transparent 60%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-    }
+h1,h2{
+margin:0 0 20px;
+}
 
-    a{ color: inherit; }
-    .container{
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 26px 22px 140px;
-    }
+p{
+margin:14px 0;
+font-size:18px;
+opacity:0.95;
+}
 
-    .topline{
-      display:flex;
-      justify-content:center;
-      margin: 6px 0 18px;
-    }
+.image-block{
+text-align:center;
+margin:40px 0;
+}
 
-    .badge{
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-      font-size: 13px;
-      color: rgba(255,255,255,0.90);
-    }
+.image-block img{
+width:82%;
+max-width:620px;
+border-radius:14px;
+filter:brightness(0.85) contrast(1.05) saturate(0.9);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
 
-    h1{
-      text-align:center;
-      font-size: 32px;
-      letter-spacing: 0.2px;
-      line-height:1.25;
-      margin: 12px 0 10px;
-    }
-    h2{
-      text-align:center;
-      font-size: 19px;
-      font-weight: normal;
-      color: var(--muted);
-      margin: 0 0 22px;
-    }
+.cta{
+display:block;
+text-align:center;
+background:#ffffff;
+color:#000;
+padding:18px;
+margin:30px auto;
+max-width:400px;
+font-weight:bold;
+text-decoration:none;
+border-radius:8px;
+font-size:18px;
+}
 
-    .lead{
-      margin: 18px 0 0;
-      font-size: 18px;
-      color: rgba(255,255,255,0.92);
-    }
+.cta-dark{
+background:#000;
+color:#fff;
+}
 
-    .divider{
-      height:1px;
-      background: var(--line);
-      margin: 28px 0;
-    }
+.price-box{
+text-align:center;
+font-size:20px;
+margin:20px 0;
+}
 
-    .card{
-      background: var(--panel);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: var(--radius);
-      padding: 18px;
-      margin: 16px 0;
-      box-shadow: 0 0 0 rgba(0,0,0,0);
-    }
+.small{
+font-size:14px;
+opacity:0.8;
+}
 
-    .card h3{
-      margin: 0 0 10px;
-      font-size: 18px;
-      letter-spacing: 0.2px;
-    }
+.sticky{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#fff;
+text-align:center;
+padding:12px;
+display:none;
+box-shadow:0 -5px 20px rgba(0,0,0,0.4);
+}
 
-    .bullets{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: rgba(255,255,255,0.92);
-    }
-    .bullets li{ margin: 8px 0; }
+.sticky a{
+background:#000;
+color:#fff;
+padding:14px 24px;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
 
-    .quote{
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: var(--radius);
-      padding: 18px;
-      margin: 18px 0;
-      font-style: italic;
-      color: rgba(255,255,255,0.90);
-    }
-
-    .ctaWrap{
-      margin: 18px 0 10px;
-    }
-
-    .cta{
-      display:block;
-      text-align:center;
-      background: linear-gradient(135deg, #ffffff, #dcdcdc);
-      color: var(--accentText);
-      padding: 18px 16px;
-      text-decoration:none;
-      font-weight: bold;
-      border-radius: 10px;
-      font-size: 18px;
-      letter-spacing: 0.3px;
-      box-shadow: 0 10px 34px rgba(255,255,255,0.12);
-      transition: transform .12s ease, box-shadow .12s ease;
-    }
-    .cta:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 14px 44px rgba(255,255,255,0.18);
-    }
-
-    .micro{
-      text-align:center;
-      margin: 10px 0 0;
-      font-size: 13px;
-      color: var(--muted2);
-      line-height:1.55;
-    }
-
-    .price{
-      text-align:center;
-      margin-top: 10px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .trust{
-      margin-top: 14px;
-      background: var(--panel);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: var(--radius);
-      padding: 14px 16px;
-    }
-    .trust .row{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-      color: rgba(255,255,255,0.90);
-      font-size: 13px;
-    }
-    .pill{
-      padding: 6px 10px;
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .faq details{
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 12px;
-      padding: 14px 14px;
-      margin: 10px 0;
-    }
-    .faq summary{
-      cursor:pointer;
-      font-weight: bold;
-      color: rgba(255,255,255,0.94);
-    }
-    .faq p{
-      margin: 10px 0 0;
-      color: rgba(255,255,255,0.88);
-    }
-
-    .video-wrapper{
-      position: relative;
-      padding-top: 56.25%;
-      margin: 18px 0 10px;
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 0 40px rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .video-wrapper iframe{
-      position:absolute; top:0; left:0; width:100%; height:100%;
-      border:none;
-    }
-
-    .sticky{
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.98);
-      backdrop-filter: blur(8px);
-      padding: 10px 12px;
-      z-index: 999;
-      display: none;
-      box-shadow: 0 -10px 30px rgba(0,0,0,0.35);
-    }
-    .sticky a{
-      display:block;
-      max-width: 760px;
-      margin: 0 auto;
-      text-align:center;
-      background:#000;
-      color:#fff;
-      padding: 14px 16px;
-      border-radius: 10px;
-      text-decoration:none;
-      font-weight:bold;
-      letter-spacing:0.2px;
-    }
-
-    @media (max-width: 480px){
-      h1{ font-size: 28px; }
-      h2{ font-size: 18px; }
-      .lead{ font-size: 17px; }
-    }
-  </style>
+</style>
 </head>
 
 <body>
-  <div class="container">
 
-    <div class="topline">
-      <div class="badge" aria-label="Resumo do método">
-        <span>15 min/dia</span>
-        <span style="opacity:.55;">•</span>
-        <span>Sem pressa</span>
-        <span style="opacity:.55;">•</span>
-        <span>Começa hoje</span>
-      </div>
-    </div>
+<!-- ABERTURA -->
 
-    <!-- NOVA DOBRA (dor concreta + promessa mínima) -->
-    <h1>Você já terminou um dia inteiro e percebeu que não lembra direito dele?</h1>
-    <h2>O piloto automático não é preguiça. É ausência de estrutura. O Método Vigília cria um “freio” diário de 15 minutos para você voltar a viver o dia — por dentro.</h2>
+<section class="section">
+<div class="container">
+<h1>Você acorda decidido a ter um dia produtivo.</h1>
 
-    <p class="lead">
-      Você trabalha, resolve coisas, responde mensagens… e quando deita, o dia parece ter passado sem você.
-      <br><br>
-      O que falta não é força de vontade. É um ponto fixo — pequeno, repetível — que interrompe a dispersão e organiza a mente para que a vida real volte a aparecer.
-    </p>
+<p>Mas antes das 10h já está reagindo.</p>
+<p>Mensagens. Demandas. Imprevistos.</p>
+<p>No fim do dia você fez muito.</p>
+<p>Mas não fez o que realmente importava.</p>
+<p>E amanhã tende a ser igual.</p>
+</div>
+</section>
 
-    <!-- Vídeo opcional (desligado por padrão) -->
-    <div id="videoBlock" style="display:none;">
-      <div class="divider"></div>
-      <div class="card">
-        <h3>Se quiser entender em 2 minutos</h3>
-        <p style="margin:0; color: rgba(255,255,255,0.88);">
-          Este vídeo é só contexto. O método completo está no material entregue após a compra.
-        </p>
-      </div>
-      <div class="video-wrapper">
-        <iframe id="videoFrame" src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen aria-label="Vídeo explicativo"></iframe>
-      </div>
-    </div>
+<div class="image-block">
+<img src="/images/img1.webp" alt="Luz da manhã entrando pela janela" loading="lazy">
+</div>
 
-    <div class="divider"></div>
+<section class="section alt">
+<div class="container">
+<h2>O padrão se repete.</h2>
 
-    <!-- Causa (nomear a cadeia) -->
-    <div class="card">
-      <h3>O que está acontecendo (em linguagem simples)</h3>
-      <ul class="bullets">
-        <li>Sem um ponto de parada, o dia vira reação: notificações, demandas e urgências.</li>
-        <li>O corpo vai, mas a mente não chega: caminho, refeições, conversas… tudo “some”.</li>
-        <li>No fim do dia, sobra a sensação de cansaço sem vida vivida.</li>
-      </ul>
-    </div>
+<p>Você promete que amanhã será diferente.</p>
+<p>Mas amanhã vira hoje. E hoje vira igual a ontem.</p>
+<p>Você não está sem tempo.</p>
+<p>Está sem estrutura.</p>
 
-    <!-- Solução mínima -->
-    <div class="card">
-      <h3>O que é o Método Vigília</h3>
-      <p style="margin:0; color: rgba(255,255,255,0.90);">
-        Um sistema diário de 15 minutos (simples e repetível) para:
-      </p>
-      <ul class="bullets">
-        <li>interromper o piloto automático,</li>
-        <li>organizar mente e prioridades,</li>
-        <li>encerrar o dia com clareza e presença real.</li>
-      </ul>
-      <p style="margin:10px 0 0; color: rgba(255,255,255,0.84);">
-        Não é motivação. Não é hack. É estrutura.
-      </p>
-    </div>
+<a href="https://pay.kiwify.com.br/2KPXAJ8" class="cta" onclick="fbq('track','InitiateCheckout');">
+Quero conhecer a estrutura
+</a>
 
-    <div class="divider"></div>
+</div>
+</section>
 
-    <!-- O que recebe (concreto) -->
-    <div class="card" id="conteudo">
-      <h3>O que você recebe</h3>
-      <ul class="bullets">
-        <li><strong>Guia completo do método</strong> (passo a passo) para aplicar em 15 min/dia.</li>
-        <li><strong>Roteiro diário</strong> para “fechar o dia” e recuperar direção.</li>
-        <li><strong>Estrutura prática</strong> para mente, tempo e vida interior (sem agressividade).</li>
-        <li><strong>Acesso imediato</strong> após a confirmação do pagamento.</li>
-      </ul>
-    </div>
+<div class="image-block">
+<img src="/images/img2.webp" alt="Trânsito visto do banco do motorista" loading="lazy">
+</div>
 
-    <!-- Prova (sem inventar depoimentos específicos) -->
-    <div class="quote" aria-label="Efeito esperado">
-      O resultado não é “vida perfeita”. É algo mais simples: dias com mais nitidez.
-      Menos dispersão no fim da noite. Mais constância em pequenas decisões. Mais presença no que você já vive.
-    </div>
+<section class="section alt2">
+<div class="container">
 
-    <!-- CTA principal -->
-    <div class="ctaWrap">
-      <a class="cta checkout-btn" href="#" aria-label="Obter acesso ao Método Vigília">
-        OBTER ACESSO AO MÉTODO VIGÍLIA
-      </a>
+<h2>Se os dias passam assim…</h2>
 
-      <div class="price" id="priceLine">
-        Valor atual: <strong>R$ 47,90</strong> • Pix ou cartão
-      </div>
+<p>Os anos passam assim também.</p>
+<p>Você não percebe agora.</p>
+<p>Mas um dia vai perceber.</p>
+<p>E tempo não se reorganiza depois.</p>
 
-      <div class="trust" aria-label="Confiança e garantia">
-        <div class="row">
-          <span class="pill">Pagamento seguro</span>
-          <span class="pill">Acesso imediato</span>
-          <span class="pill">Garantia de 7 dias</span>
-        </div>
-        <p class="micro">
-          Você será direcionado ao checkout. Se fizer sentido, conclua em menos de 1 minuto e comece hoje à noite.
-        </p>
-      </div>
-    </div>
+</div>
+</section>
 
-    <div class="divider"></div>
+<section class="section">
+<div class="container">
 
-    <!-- Para quem é (mais específico, menos genérico) -->
-    <div class="card">
-      <h3>Para quem é</h3>
-      <ul class="bullets">
-        <li>Para quem sente que o dia passa “sem registro”.</li>
-        <li>Para quem trabalha muito e chega no fim do dia com a mente dispersa.</li>
-        <li>Para quem quer ordem e presença sem barulho, sem performance, sem agressividade.</li>
-      </ul>
-    </div>
+<h2>Existe uma forma simples de interromper isso.</h2>
 
-    <!-- FAQ (objeções reais) -->
-    <div class="card faq" id="faq">
-      <h3>Perguntas rápidas</h3>
+<p>Um sistema de 15 minutos por dia.</p>
+<p>Para encerrar o dia com clareza.</p>
+<p>Para sair do modo reativo.</p>
+<p>Para recuperar controle.</p>
 
-      <details>
-        <summary>Isso é só “mais um hábito”?</summary>
-        <p>
-          Não. Hábito isolado não segura o piloto automático. O Vigília é uma estrutura curta (15 min) que funciona como “ponto fixo” do dia.
-        </p>
-      </details>
+<p><strong>Essa estrutura se chama Método Vigília.</strong></p>
 
-      <details>
-        <summary>E se eu já “sei” sobre presença e disciplina?</summary>
-        <p>
-          Saber não é o problema. O problema é não ter uma forma simples de aplicar quando o dia está cheio.
-          O método serve para transformar ideia em prática repetível.
-        </p>
-      </details>
+<a href="https://pay.kiwify.com.br/2KPXAJ8" class="cta" onclick="fbq('track','InitiateCheckout');">
+Obter acesso ao Método Vigília
+</a>
 
-      <details>
-        <summary>Precisa de muito tempo?</summary>
-        <p>
-          Não. É desenhado para caber em rotinas reais. 15 minutos por dia, sem depender de motivação.
-        </p>
-      </details>
+</div>
+</section>
 
-      <details>
-        <summary>Como recebo o acesso?</summary>
-        <p>
-          Após a confirmação do pagamento, você recebe o acesso imediatamente (instruções de entrega estarão no checkout).
-        </p>
-      </details>
+<div class="image-block">
+<img src="/images/img3.webp" alt="Caderno aberto sobre a mesa" loading="lazy">
+</div>
 
-      <details>
-        <summary>Tem garantia?</summary>
-        <p>
-          Sim. Você terá 7 dias para avaliar com calma. Se não fizer sentido, pode solicitar reembolso dentro do prazo.
-        </p>
-      </details>
-    </div>
+<section class="section alt">
+<div class="container">
 
-    <!-- CTA final -->
-    <div class="ctaWrap">
-      <a class="cta checkout-btn" href="#" aria-label="Obter acesso ao Método Vigília">
-        OBTER ACESSO (COMEÇAR HOJE)
-      </a>
-      <p class="micro">
-        Se você costuma deixar para depois: não brigue com isso. Só conclua o acesso e comece com calma hoje à noite.
-      </p>
-    </div>
+<h2>Valor atual</h2>
 
-  </div>
+<p>O acesso completo ao Método Vigília está disponível pelo valor atual de <strong>R$47,90</strong>.</p>
 
-  <!-- Sticky CTA -->
-  <div class="sticky" id="stickyCTA">
-    <a class="checkout-btn" href="#" aria-label="Obter acesso agora">
-      OBTER ACESSO AGORA
-    </a>
-  </div>
+<p>Pagamento único. Acesso imediato.</p>
 
-  <script>
-    // ===== Helpers =====
-    function withQueryParams(url) {
-      try {
-        const qs = window.location.search || "";
-        if (!qs) return url;
-        const joiner = url.includes("?") ? "&" : "?";
-        return url + joiner + qs.replace(/^\?/, "");
-      } catch (e) {
-        return url;
-      }
-    }
+<div class="price-box">
+R$47,90
+</div>
 
-    function setCheckoutLinks() {
-      const finalUrl = withQueryParams(CHECKOUT_URL);
-      document.querySelectorAll(".checkout-btn").forEach(btn => btn.setAttribute("href", finalUrl));
-    }
+<h2>Garantia de 7 dias</h2>
 
-    // ===== Pixel events (limpos) =====
-    function trackOnce(name) {
-      // evita spam do mesmo evento em reload rápido
-      const key = "__trk_" + name;
-      if (sessionStorage.getItem(key)) return;
-      sessionStorage.setItem(key, "1");
-      fbq('trackCustom', name);
-    }
+<p>Você pode testar o método por 7 dias.</p>
+<p>Se não fizer sentido, basta solicitar reembolso.</p>
+<p>Sem burocracia.</p>
 
-    // ViewContent quando o usuário realmente consumiu algo (scroll)
-    let viewContentTracked = false;
-    window.addEventListener("scroll", () => {
-      const scrollPct = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
-      if (!viewContentTracked && scrollPct > 15) {
-        viewContentTracked = true;
-        fbq('track', 'ViewContent');
-      }
-      if (scrollPct > 35) trackOnce("Scroll35");
-      if (scrollPct > 55) trackOnce("Scroll55");
-    });
+<h2>Perguntas frequentes</h2>
 
-    // Tempo na página (qualidade)
-    setTimeout(() => trackOnce("TimeOnPage30s"), 30000);
-    setTimeout(() => trackOnce("TimeOnPage60s"), 60000);
+<p><strong>Preciso ter experiência?</strong><br>
+Não. A estrutura é simples e prática.</p>
 
-    // Clique no CTA = intenção forte (custom)
-    document.addEventListener("click", (e) => {
-      const btn = e.target.closest(".checkout-btn");
-      if (!btn) return;
+<p><strong>E se minha rotina for corrida?</strong><br>
+O método foi criado para a rotina real.</p>
 
-      fbq('trackCustom', 'CTA_Click');
-      fbq('trackCustom', 'StrongIntent');
+<p><strong>E se eu falhar um dia?</strong><br>
+Você retoma no dia seguinte. O foco é constância, não perfeição.</p>
 
-      // NÃO dispare InitiateCheckout aqui.
-      // InitiateCheckout deve ocorrer no checkout real (se a plataforma suportar).
-      try {
-        const label = (btn.innerText || "").trim().slice(0, 60);
-        fbq('trackCustom', 'CTA_Label', { label });
-      } catch {}
-    });
+<a href="https://pay.kiwify.com.br/2KPXAJ8" class="cta cta-dark" onclick="fbq('track','InitiateCheckout');">
+Começar agora — R$47,90
+</a>
 
-    // Sticky CTA após certo scroll
-    let stickyShown = false;
-    window.addEventListener("scroll", () => {
-      const scrollPct = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
-      if (!stickyShown && scrollPct > 40) {
-        stickyShown = true;
-        document.getElementById("stickyCTA").style.display = "block";
-      }
-    });
+<p class="small">Pagamento seguro via Pix ou cartão. Acesso imediato após confirmação.</p>
 
-    // Vídeo opcional
-    (function initVideo() {
-      if (!SHOW_VIDEO) return;
-      const block = document.getElementById("videoBlock");
-      const frame = document.getElementById("videoFrame");
-      block.style.display = "block";
-      frame.src = VIDEO_EMBED_URL;
-    })();
+</div>
+</section>
 
-    // Init
-    setCheckoutLinks();
-  </script>
+<!-- BOTÃO FIXO -->
+<div class="sticky" id="stickyBtn">
+<a href="https://pay.kiwify.com.br/2KPXAJ8" onclick="fbq('track','InitiateCheckout');">
+Começar agora — R$47,90
+</a>
+</div>
+
+<script>
+window.addEventListener('scroll', function() {
+if(window.scrollY > 1200){
+document.getElementById('stickyBtn').style.display='block';
+}
+});
+</script>
+
 </body>
 </html>
